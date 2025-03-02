@@ -8,8 +8,8 @@ user_agent = "my_app/1 (https://mywebsite.com; contact@mywebsite.com)"
 geolocator = Nominatim(user_agent=user_agent)
 
 # 查詢地點
-with open('output2.csv', 'w', encoding='utf-8', newline='') as file:
-    writer = csv.writer(file)
+with open('output2.csv', 'w', encoding='utf-8', newline='') as csvfile:
+    writer = csv.writer(csvfile)
     with open('search_result.csv', 'r', encoding='utf-8') as file:
         line = file.readlines()
         for el in line:
